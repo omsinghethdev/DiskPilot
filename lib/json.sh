@@ -35,7 +35,7 @@ json_obj_create(){
         result="${result}\"$1\":\"$2\""
         shift 2
     done
-    echo "[{${result}}]"
+    echo "{${result}}"
 
 }
 #Description:Creates JSON array from given one or more object
@@ -51,5 +51,5 @@ json_array_create(){
         result="${result}$1"
         shift
     done
-    echo "${result}"
+    echo "[${result}]"
 }
